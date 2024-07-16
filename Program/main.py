@@ -50,7 +50,7 @@ def resize_image():
 #tk root
 root = tk.Tk()
 root.title("Image Resizer")
-root.geometry("700x250")
+root.geometry("700x300")
 root.resizable(False,False)
 
 root.grid_rowconfigure(0, weight=2)
@@ -69,14 +69,14 @@ choose_file_label = tk.Label(top_frame,text="Hiçbir resim seçilmedi.",wrapleng
 choose_file_label.pack(side=tk.LEFT,padx=5)
 
 choose_file_button = tk.Button(top_frame,text="Resim seç",command=choose_image)
-choose_file_button.pack(side=tk.LEFT,padx=1)
+choose_file_button.pack(side=tk.LEFT,padx=1,pady=20)
 
 #middle frame
 choose_width_label = tk.Label(middle_frame,text="Genişlik : ",width=15)
-choose_width_label.pack(side=tk.TOP,padx=5,pady=1)
+choose_width_label.pack(side=tk.TOP,padx=5,pady=0)
 
 choose_width_textbox = tk.Entry(middle_frame,width=15)
-choose_width_textbox.pack(side=tk.TOP,padx=0)
+choose_width_textbox.pack(side=tk.TOP,padx=0,pady=0)
 
 x_label = tk.Label(middle_frame,text="x",width=2)
 x_label.pack(side=tk.TOP,padx=5,pady=0)
@@ -90,6 +90,8 @@ choose_height_textbox.pack(side=tk.TOP,padx=0)
 choose_file_button = tk.Button(middle_frame,text="Uygula",command=resize_image)
 choose_file_button.pack(side=tk.TOP,pady=10)
 
+developer_label = tk.Label(middle_frame,text="Developed by Deniz Varıcı. www.denizvarici.com.tr",width=50)
+developer_label.pack(side=tk.BOTTOM,padx=0,pady=0)
 
 def main():
     root.mainloop()
